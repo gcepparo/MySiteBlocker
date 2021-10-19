@@ -1,0 +1,31 @@
+{
+
+    "manifest_version": 2,
+    "name": "MySiteBlocker",
+    "version": "1.0",
+  
+    "description": "custom block site",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+
+    "permissions": [
+        "activeTab"
+      ],
+
+
+
+    "web_accessible_resources": [
+      "icons/bruh.jpg"
+    ],
+
+    "content_scripts": [
+      {
+        "matches": ["*://*.twitch.tv/*"],
+        "css": ["hide.css"],
+        "js": ["mySiteBlocker.js"]
+      }
+    ]
+  
+  }
